@@ -1,0 +1,199 @@
+@use '../abstracts' as *;
+
+.section{
+  max-width: rem(500);
+  margin: 0 auto;
+  text-align: center;
+
+  &__title{
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1em;
+
+    @include lg-min {
+      font-size: 2em;
+      margin-bottom: 0.7em;
+    }
+  }
+  &__desc{
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 3em;
+
+    @include lg-min {
+      font-size: 0.75em;
+    }
+  }
+
+  @include lg-min {
+    display: flex;
+    align-items: center;
+    text-align: initial;
+    max-width: rem(800);
+    gap: 3rem;
+  }
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 1.5rem 0 1rem;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: rem(8);
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    background-color: rgba(0,0,0,0.15);
+    border-radius: 0 0 rem(8) rem(8);
+    width: 100%;
+    height: rem(15);
+    bottom: rem(-7);
+    left: 0;
+    z-index: -1;
+  }
+
+  @include lg-min {
+    padding: 1.5rem;
+  }
+
+  &__container{
+    margin: 1rem auto 0;
+    text-align: center;
+    
+    @include lg-min {
+      min-width: rem(380);
+    }
+  }
+  &__title{
+    background-color: $blue;
+    font-weight: 400;
+    font-size: 0.75em;
+    padding: 1em 3em;
+    border-radius: rem(8);
+    position: relative;
+
+    &::after{
+      position: absolute;
+      content: '';
+      background-color: rgba(0,0,0,0.15);
+      border-radius: 0 0 rem(8) rem(8);
+      width: 100%;
+      height: rem(15);
+      bottom: rem(-7);
+      left: 0;
+      z-index: -1;
+
+      @include lg-min {
+        bottom: rem(-6);
+      }
+    }
+
+    &--medium{
+      color: #fff;
+      font-weight: 500;
+    }
+    &--light{
+      opacity: 80%;
+    }
+  }
+  &__agreement{
+    color: $grayish-blue;
+    font-size: 0.6125em;
+
+    &--red{
+      color: $red;
+      font-weight: 700;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__input{
+    width: 100%;
+    border: 2px solid rgb($grayish-blue, 0.3);
+    padding: 0.8em 1em;
+    border-radius: rem(5);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.8125em;
+    transition: border 0.3s;
+    position: relative;
+
+    @include lg-min {
+      padding: 0.8em 1.5em;
+    }
+
+    &:focus{
+      outline: none;
+      border: 2px solid $grayish-blue;
+    }
+
+    &--container{
+      position: relative;
+    }
+  }
+  &__btn{
+    background-color: $green;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8125em;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: rem(0.5);
+    padding: 0.8em 0;
+    border-radius: rem(5);
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.3s;
+
+    &::after{
+      position: absolute;
+      content: '';
+      background-color: $dark-green;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      border-radius: 0 0 rem(5) rem(5);
+    }
+    &:hover{
+      opacity: 80%;
+    }
+  }
+}
+
+.input-error{
+  border: 2px solid $red;
+  
+  &:focus{
+    border: 2px solid $red;
+  }
+}
+
+.error{
+  &--msg{
+    color: $red;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.6875em;
+    display: flex;
+    justify-content: right;
+    margin: rem(5) 0;
+  }
+  &--icon{
+    position: absolute;
+    top: rem(11);
+    right: rem(15);
+    width: rem(22);
+    height: rem(22);
+    display: none;
+  }
+}
