@@ -168,6 +168,26 @@
       opacity: 80%;
     }
   }
+  &__submitted{
+
+    &--msg{
+      color: gray;
+      font-size: 1.2em;
+      margin-bottom: 0.5rem;
+    }
+  }
+  // &__password{
+
+  //   &--icon{
+  //     color: gray;
+  //     position: absolute;
+  //     top: rem(7);
+  //     right: rem(20);
+  //     font-size: 1.3em;
+  //     cursor: pointer;
+  //     z-index: 10;
+  //   }
+  // }
 }
 
 .input-error{
@@ -195,5 +215,10 @@
     width: rem(22);
     height: rem(22);
     display: none;
+    // z-index: 20;
   }
+}
+
+.uil{
+  color: gray;
 }

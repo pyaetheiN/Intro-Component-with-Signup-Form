@@ -7,9 +7,9 @@ const form = document.querySelector('.form'),
       btn = document.querySelector('.form__btn');
 
 // regex patterns
-const validName = /^([A-Z])([a-z]{1,20})/g,
+const validName = /^[A-Z]([a-zA-Z.\s]){2,}$/, // first letter must be a capital letter
       validEmail = /^(?:[a-zA-Z0-9]){2,20}@{1}(?:[a-z0-9]){2,20}\.{1}(?:[a-z]{2,20})((\.(?:[a-z]){2,3})?)$/,
-      validPassword = /([a-zA-Z0-9])([^a-zA-Z0-9])/;
+      validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])?.{1,30}$/; // at least one digit, one lowercase, one uppercase(optional) 
 
 // error messages / icons
 const fNameError = document.querySelector('.fname-error'),
@@ -17,6 +17,10 @@ const fNameError = document.querySelector('.fname-error'),
       emailError = document.querySelector('.email-error'),
       passwordError = document.querySelector('.password-error');
 
+// show password
+// const passwordIcon = document.querySelector('.form__password--icon');
+
+// event listeners
 form.addEventListener('submit', (e) => {
   if( fName.value.match(validName) &&
       lName.value.match(validName) &&
@@ -30,6 +34,18 @@ form.addEventListener('submit', (e) => {
   showErrors();
   exceptEmail();
 })
+
+// passwordIcon.addEventListener('click', () => {
+//   if(password.type === 'password'){
+//     password.type = 'text';
+//     // passwordIcon.classList.replace('uil-eye-slash', 'uil-eye');
+//   } else{
+//     password.type = 'password';
+//     // passwordIcon.classList.replace('uil-eye', 'uil-eye-slash');
+//   }
+// })
+
+// functions
 
 function showErrors(){
   errorMsg(fName, validName, fNameError, 'First Name');
@@ -55,9 +71,6 @@ function errorMsg(input, validInput, inputError, type){
     inputError.innerText = `${type} is invalid`;
     errorBorder.classList.add('input-error');
     errorIcon.style.display = 'block';
-
-    // remove placeholder
-    input.setAttribute('placeholder', '');
   } 
   else{
     inputError.innerText = '';
@@ -84,9 +97,6 @@ function exceptEmail(){
     emailError.innerText = 'Looks like this is not an email';
     errorBorder.classList.add('input-error');
     errorIcon.style.display = 'block';
-
-    // remove placeholder
-    email.setAttribute('placeholder', '');
   } 
   else{
     emailError.innerText = '';

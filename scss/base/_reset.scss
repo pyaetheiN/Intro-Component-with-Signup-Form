@@ -17,16 +17,19 @@ body{
   background-image: url("/images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  justify-content: center;
-  gap: 4rem;
-  padding: 5rem 1rem 0;
+  // gap: 4rem;
+  padding: 0 1rem;
   color: #fff;
 
   @include lg-min {
     background-image: url("/images/bg-intro-desktop.png");
   }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
 }
