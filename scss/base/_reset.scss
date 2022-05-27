@@ -14,7 +14,7 @@ body{
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   background-color: $red;
-  background-image: url("/images/bg-intro-mobile.png");
+  background-image: url("../images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 1rem;
@@ -24,7 +24,7 @@ body{
     padding: 4.5rem 1rem 0;
   }
   @include lg-min{
-    background-image: url("/images/bg-intro-desktop.png");
+    background-image: url("../images/bg-intro-desktop.png");
   }
 }
 
@@ -34,10 +34,8 @@ main{
   align-items: center;
   min-height: 100vh;
   justify-content: center;
+  margin: 2rem 0;
 
-  @include sm-max{
-    margin-bottom: 2rem;
-  }
   @include lg-min{
     margin: 1rem 0;
   }

@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   background-color: hsl(0deg, 100%, 74%);
-  background-image: url("/images/bg-intro-mobile.png");
+  background-image: url("../images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 1rem;
@@ -26,7 +26,7 @@ body {
 }
 @media screen and (min-width: 60.5rem) {
   body {
-    background-image: url("/images/bg-intro-desktop.png");
+    background-image: url("../images/bg-intro-desktop.png");
   }
 }
 
@@ -36,11 +36,7 @@ main {
   align-items: center;
   min-height: 100vh;
   justify-content: center;
-}
-@media screen and (max-width: 23.75rem) {
-  main {
-    margin-bottom: 2rem;
-  }
+  margin: 2rem 0;
 }
 @media screen and (min-width: 60.5rem) {
   main {
