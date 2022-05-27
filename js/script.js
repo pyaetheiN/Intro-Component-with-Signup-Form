@@ -75,6 +75,7 @@ function errorMsg(input, validInput, inputError, type){
     inputError.innerText = `${type} is invalid`;
     errorBorder.classList.add('input-error');
     errorIcon.style.display = 'block';
+    passwordIcon.style.transform = 'translateX(-25px)';
   } 
   else{
     inputError.innerText = '';
