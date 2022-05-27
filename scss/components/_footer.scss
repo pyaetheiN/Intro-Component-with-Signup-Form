@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.attribution{
+  
+  @include sm-max{
+    font-size: 0.6875em;
+  }
+  @include xl-min{
+    font-size: 0.9125em;
+  }
+}

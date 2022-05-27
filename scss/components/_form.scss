@@ -34,6 +34,9 @@
     max-width: rem(800);
     gap: 3rem;
   }
+  @include xl-min{
+    transform: scale(1.3);
+  }
 }
 
 .form{
@@ -176,18 +179,17 @@
       margin-bottom: 0.5rem;
     }
   }
-  // &__password{
+  &__password{
 
-  //   &--icon{
-  //     color: gray;
-  //     position: absolute;
-  //     top: rem(7);
-  //     right: rem(20);
-  //     font-size: 1.3em;
-  //     cursor: pointer;
-  //     z-index: 10;
-  //   }
-  // }
+    &--icon{
+      color: gray;
+      position: absolute;
+      top: rem(7);
+      right: rem(20);
+      font-size: 1.3em;
+      cursor: pointer;
+    }
+  }
 }
 
 .input-error{
@@ -215,7 +217,6 @@
     width: rem(22);
     height: rem(22);
     display: none;
-    // z-index: 20;
   }
 }
 

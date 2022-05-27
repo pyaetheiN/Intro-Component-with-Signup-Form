@@ -19,6 +19,11 @@ body {
   padding: 0 1rem;
   color: #fff;
 }
+@media screen and (max-width: 23.75rem) {
+  body {
+    padding: 4.5rem 1rem 0;
+  }
+}
 @media screen and (min-width: 60.5rem) {
   body {
     background-image: url("/images/bg-intro-desktop.png");
@@ -31,6 +36,16 @@ main {
   align-items: center;
   min-height: 100vh;
   justify-content: center;
+}
+@media screen and (max-width: 23.75rem) {
+  main {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 60.5rem) {
+  main {
+    margin: 1rem 0;
+  }
 }
 
 .section {
@@ -68,6 +83,11 @@ main {
     text-align: initial;
     max-width: 50rem;
     gap: 3rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .section {
+    transform: scale(1.3);
   }
 }
 
@@ -204,6 +224,14 @@ main {
   font-size: 1.2em;
   margin-bottom: 0.5rem;
 }
+.form__password--icon {
+  color: gray;
+  position: absolute;
+  top: 0.4375rem;
+  right: 1.25rem;
+  font-size: 1.3em;
+  cursor: pointer;
+}
 
 .input-error {
   border: 2px solid hsl(0deg, 100%, 74%);
@@ -232,4 +260,15 @@ main {
 
 .uil {
   color: gray;
+}
+
+@media screen and (max-width: 23.75rem) {
+  .attribution {
+    font-size: 0.6875em;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .attribution {
+    font-size: 0.9125em;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,7 @@
 @use './functions' as *;
 
+$screen-xl-min: rem(1200);
+
 $screen-lg-min: rem(968);
+
+$screen-sm-max: rem(380);

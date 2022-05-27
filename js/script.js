@@ -1,4 +1,4 @@
-// elements
+// selectors
 const form = document.querySelector('.form'),
       fName = document.querySelector('.form__first-name'),
       lName = document.querySelector('.form__last-name'),
@@ -18,7 +18,8 @@ const fNameError = document.querySelector('.fname-error'),
       passwordError = document.querySelector('.password-error');
 
 // show password
-// const passwordIcon = document.querySelector('.form__password--icon');
+const passwordIcon = document.querySelector('.form__password--icon');
+
 
 // event listeners
 form.addEventListener('submit', (e) => {
@@ -27,7 +28,8 @@ form.addEventListener('submit', (e) => {
       email.value.match(validEmail) &&
       password.value.match(validPassword)){
     return;
-  } else{
+  } 
+  else{
     e.preventDefault();
   }
 
@@ -35,18 +37,18 @@ form.addEventListener('submit', (e) => {
   exceptEmail();
 })
 
-// passwordIcon.addEventListener('click', () => {
-//   if(password.type === 'password'){
-//     password.type = 'text';
-//     // passwordIcon.classList.replace('uil-eye-slash', 'uil-eye');
-//   } else{
-//     password.type = 'password';
-//     // passwordIcon.classList.replace('uil-eye', 'uil-eye-slash');
-//   }
-// })
+passwordIcon.addEventListener('click', () => {
+  if(password.type === 'password'){
+    password.type = 'text';
+    passwordIcon.classList.replace('uil-eye-slash', 'uil-eye');
+  } else{
+    password.type = 'password';
+    passwordIcon.classList.replace('uil-eye', 'uil-eye-slash');
+  }
+})
+
 
 // functions
-
 function showErrors(){
   errorMsg(fName, validName, fNameError, 'First Name');
   errorMsg(lName, validName, lNameError, 'Last Name');
@@ -66,6 +68,8 @@ function errorMsg(input, validInput, inputError, type){
 
     // remove placeholder
     input.setAttribute('placeholder', '');
+
+    passwordIcon.style.transform = 'translateX(-25px)';
   }
   else if(!input.value.match(validInput)){
     inputError.innerText = `${type} is invalid`;
@@ -76,6 +80,7 @@ function errorMsg(input, validInput, inputError, type){
     inputError.innerText = '';
     errorBorder.classList.remove('input-error');
     errorIcon.style.display = 'none';
+    passwordIcon.style.transform = 'translateX(0)';
   }
 }
 

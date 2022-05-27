@@ -1,7 +1,19 @@
 @use './breakpoints' as *;
 
+@mixin xl-min{
+  @media screen and (min-width: $screen-xl-min){
+    @content;
+  }
+}
+
 @mixin lg-min {
   @media screen and (min-width: $screen-lg-min){
+    @content;
+  }
+}
+
+@mixin sm-max{
+  @media screen and (max-width: $screen-sm-max){
     @content;
   }
 }
