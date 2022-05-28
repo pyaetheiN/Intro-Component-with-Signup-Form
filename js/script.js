@@ -75,6 +75,10 @@ function errorMsg(input, validInput, inputError, type){
     inputError.innerText = `${type} is invalid`;
     errorBorder.classList.add('input-error');
     errorIcon.style.display = 'block';
+
+    // remove placeholder
+    input.setAttribute('placeholder', '');
+    
     passwordIcon.style.transform = 'translateX(-25px)';
   } 
   else{
@@ -103,6 +107,9 @@ function exceptEmail(){
     emailError.innerText = 'Looks like this is not an email';
     errorBorder.classList.add('input-error');
     errorIcon.style.display = 'block';
+
+    // remove placeholder
+    input.setAttribute('placeholder', '');
   } 
   else{
     emailError.innerText = '';
