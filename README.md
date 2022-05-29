@@ -56,7 +56,7 @@ Users should be able to:
 
 ```js
 const validName = /^[A-Z]([a-zA-Z.\s]){1,}$/, // first letter must be a capital letter (minimum 2 words)
-      validEmail = /^(?:[a-zA-Z0-9]){2,20}@{1}(?:[a-z0-9]){2,20}\.{1}(?:[a-z]{2,20})((\.(?:[a-z]){2,3})?)$/,
+      validEmail = /^(?:[a-zA-Z0-9]){2,20}@{1}(?:[a-z0-9]){2,20}\.{1}(?:[a-z]){2,20}((\.(?:[a-z]){2,3})?)$/,
       validPassword = /^(?=.*\d)?(?=.*[a-z])(?=.*[A-Z])?.{5,30}$/; // at least one digit, one lowercase, one uppercase(optional) 
 
 passwordIcon.addEventListener('click', () => {
