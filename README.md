@@ -79,6 +79,7 @@ passwordIcon.addEventListener('click', () => {
 - https://www.w3resource.com/javascript/form/password-validation.php 
 - https://www.regular-expressions.info/lookaround.html
 - https://stackoverflow.com/questions/32125809/regex-using-dot-star-in-lookaheads
+- https://stackoverflow.com/questions/21632713/regex-pattern-what-is-d-w-and-n
 
 ## Author
 
